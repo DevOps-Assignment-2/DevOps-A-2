@@ -181,9 +181,103 @@ main {
   }
 }
 
+/* ==========================================================================
+1. HOME PAGE STYLES (src/index.html) - Assigned to: Team Lead
+   ========================================================================== */
+.hero-section {
+  background: linear-gradient(rgba(30, 41, 59, 0.88), rgba(15, 118, 110, 0.88));
+  color: var(--bg-white);
+  padding: 4.5rem 0;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.hero-section h1 {
+  color: var(--bg-white);
+  font-size: 2.75rem;
+  margin-bottom: 1rem;
+}
+
+.hero-section p {
+  font-size: 1.15rem;
+  max-width: 700px;
+  margin: 0 auto 1.75rem;
+  color: #f1f5f9;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.info-card {
+  background: var(--bg-white);
+  padding: 1.75rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  border-top: 4px solid var(--primary-color);
+}
+
+.info-card h2 {
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.hours-list {
+  list-style: none;
+  margin-top: 0.5rem;
+}
+
+.hours-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.35rem 0;
+  border-bottom: 1px dashed var(--border-color);
+  font-size: 0.95rem;
+}
+
+.quick-explore {
+  background: var(--bg-white);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+}
+
+.quick-explore h2 {
+  margin-bottom: 0.5rem;
+}
+
+.explore-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.25rem;
+  flex-wrap: wrap;
+}
+
+/* Home Page Responsive Media Query */
+@media (max-width: 850px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .home-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* ==========================================================================
-   3. MEMBERSHIP PAGE STYLES (src/membership.html) - Assigned to: Member 2
+3. MEMBERSHIP PAGE STYLES (src/membership.html) - Assigned to: Member 2
    ========================================================================== */
 .plans-grid {
   display: grid;
@@ -270,6 +364,59 @@ main {
 /* Membership Page Responsive Media Query */
 @media (max-width: 880px) {
   .plans-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+4. DIGITAL SERVICES PAGE STYLES (src/services.html) - Assigned to: Member 3
+   ========================================================================== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+}
+
+.service-card {
+  background: var(--bg-white);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+  border-left: 5px solid var(--primary-color);
+}
+
+.service-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.service-timing {
+  background: #e2e8f0;
+  color: var(--secondary-color);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+}
+
+.service-steps {
+  margin-top: 0.9rem;
+  padding-left: 1.25rem;
+  color: var(--text-muted);
+  font-size: 0.94rem;
+}
+
+.service-steps li {
+  margin-bottom: 0.35rem;
+}
+
+/* Digital Services Page Responsive Media Query */
+@media (max-width: 768px) {
+  .services-grid {
     grid-template-columns: 1fr;
   }
 }
