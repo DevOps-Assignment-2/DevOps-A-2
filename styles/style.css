@@ -277,6 +277,98 @@ main {
 }
 
 /* ==========================================================================
+3. MEMBERSHIP PAGE STYLES (src/membership.html) - Assigned to: Member 2
+   ========================================================================== */
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.plan-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 2rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-card.featured-plan {
+  border: 2px solid var(--primary-color);
+  box-shadow: var(--shadow-md);
+}
+
+.plan-tag {
+  background: var(--accent-color);
+  color: var(--bg-white);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  align-self: center;
+  margin-bottom: 0.75rem;
+}
+
+.plan-price {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin: 0.75rem 0;
+}
+
+.plan-price span {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.plan-features {
+  list-style: none;
+  text-align: left;
+  margin: 1.25rem 0 1.75rem;
+  flex: 1;
+}
+
+.plan-features li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.95rem;
+}
+
+.rules-box {
+  background: #fffbeb;
+  border-left: 5px solid var(--accent-color);
+  padding: 1.5rem 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.rules-box h2 {
+  margin-bottom: 0.75rem;
+  font-size: 1.4rem;
+}
+
+.rules-box ul {
+  padding-left: 1.25rem;
+}
+
+.rules-box li {
+  margin-bottom: 0.45rem;
+}
+
+/* Membership Page Responsive Media Query */
+@media (max-width: 880px) {
+  .plans-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
 4. DIGITAL SERVICES PAGE STYLES (src/services.html) - Assigned to: Member 3
    ========================================================================== */
 .services-grid {
