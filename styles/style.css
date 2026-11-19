@@ -181,9 +181,8 @@ main {
   }
 }
 
-
 /* ==========================================================================
-   1. HOME PAGE STYLES (src/index.html) - Assigned to: Team Lead
+1. HOME PAGE STYLES (src/index.html) - Assigned to: Team Lead
    ========================================================================== */
 .hero-section {
   background: linear-gradient(rgba(30, 41, 59, 0.88), rgba(15, 118, 110, 0.88));
@@ -273,6 +272,59 @@ main {
   }
 
   .home-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+4. DIGITAL SERVICES PAGE STYLES (src/services.html) - Assigned to: Member 3
+   ========================================================================== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+}
+
+.service-card {
+  background: var(--bg-white);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+  border-left: 5px solid var(--primary-color);
+}
+
+.service-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.service-timing {
+  background: #e2e8f0;
+  color: var(--secondary-color);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+}
+
+.service-steps {
+  margin-top: 0.9rem;
+  padding-left: 1.25rem;
+  color: var(--text-muted);
+  font-size: 0.94rem;
+}
+
+.service-steps li {
+  margin-bottom: 0.35rem;
+}
+
+/* Digital Services Page Responsive Media Query */
+@media (max-width: 768px) {
+  .services-grid {
     grid-template-columns: 1fr;
   }
 }
